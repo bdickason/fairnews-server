@@ -4,8 +4,7 @@
   "description": "See how different news sites handle popular stories",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node --experimental-modules index.js"
   },
   "repository": {
     "type": "git",
@@ -17,6 +16,7 @@
     "url": "https://github.com/bdickason/fairnews-server/issues"
   },
   "homepage": "https://github.com/bdickason/fairnews-server#readme",
+  "type": "module",
   "dependencies": {
     "dotenv": "^8.1.0",
     "fastify": "^2.7.1",
