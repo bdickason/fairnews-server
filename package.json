@@ -1,0 +1,25 @@
+{
+  "name": "fairnews-server",
+  "version": "1.0.0",
+  "description": "See how different news sites handle popular stories",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bdickason/fairnews-server.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bdickason/fairnews-server/issues"
+  },
+  "homepage": "https://github.com/bdickason/fairnews-server#readme",
+  "dependencies": {
+    "dotenv": "^8.1.0",
+    "fastify": "^2.7.1",
+    "newsapi": "^2.4.0"
+  }
+}
