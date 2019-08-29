@@ -4,5 +4,8 @@ dotenv.config();	// Load environment variables from .env
 
 import News from './lib/news.js'
 
-const test = new News(process.env.NEWS_API)
-console.log(test)
+new News(process.env.NEWS_API)
+
+import Server from './lib/server.js'
+
+new Server()
