@@ -1,4 +1,4 @@
-from lib.config import Config
+from fairnews.config import Config
 
 # Setup News API
 from newsapi import NewsApiClient
@@ -15,5 +15,5 @@ app = Flask(__name__)
 
 # Default route - display headlines from common sources
 @app.route('/')
-def hello_world():
+def headlines():
     return top_headlines
