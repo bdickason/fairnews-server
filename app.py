@@ -1,13 +1,9 @@
 from fairnews.config import Config
-
-# Setup News API
-from newsapi import NewsApiClient
+from fairnews.news import News
 
 config = Config()
 
-newsapi = NewsApiClient(config.api_key)
-
-top_headlines = newsapi.get_top_headlines(sources='cnn, fox-news')
+news = News(config.api_key)
 
 # Initialize web server
 from flask import Flask
@@ -16,4 +12,4 @@ app = Flask(__name__)
 # Default route - display headlines from common sources
 @app.route('/')
 def headlines():
-    return top_headlines
+    return news.headlines()
