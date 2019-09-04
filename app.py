@@ -14,4 +14,11 @@ newsapi = NewsApiClient(api_key)
 
 top_headlines = newsapi.get_top_headlines(sources='cnn, fox-news')
 
-print(top_headlines)
+# Initialize web server
+from flask import Flask
+app = Flask(__name__)
+
+# Default route - display headlines from common sources
+@app.route('/')
+def hello_world():
+    return top_headlines
